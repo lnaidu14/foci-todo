@@ -524,6 +524,7 @@ export default function TodoList() {
             Due Date
           </label>
           <Calendar
+            data-testid="test-calendar"
             value={datetime24h}
             showTime
             variant="filled"
