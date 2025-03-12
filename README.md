@@ -23,7 +23,7 @@ npm run dev # Runs the application (on port 5173 by default)
 Although I wasn't able to run the tests, they have been setup and configured. To run them, use the command:
 
 ```bash
-    npm run test
+npm run test
 ```
 
 ## Nice to haves:
