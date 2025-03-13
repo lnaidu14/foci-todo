@@ -21,7 +21,7 @@ describe("TodoList", () => {
     );
     expect(emptyTodoListText).toBeInTheDocument();
 
-    const addTodoButton = screen.getByRole("button", { name: /new/i });
+    const addTodoButton = screen.getByRole("button", { name: /add todo/i });
     await userEvent.click(addTodoButton);
     const titleInputText = screen.getByRole("textbox", { name: /title/i });
     const descriptionInputText = screen.getByRole("textbox", {
@@ -48,7 +48,7 @@ describe("TodoList", () => {
     );
     expect(emptyTodoListText).toBeInTheDocument();
 
-    const addTodoButton = screen.getByRole("button", { name: /new/i });
+    const addTodoButton = screen.getByRole("button", { name: /add todo/i });
     await userEvent.click(addTodoButton);
     const titleInputText = screen.getByRole("textbox", { name: /title/i });
     const submitButton = screen.getByRole("button", { name: /save/i });
@@ -60,7 +60,7 @@ describe("TodoList", () => {
     expect(todoTitleError).toBeInTheDocument();
   });
 
-  // Similar test for calendar date picker. A due date is required to be picked.
+  // Similar test for calendar date picker. A due date is required to be picked and an error should pop-up if not chosen. Note: This is currently not working as expected. The calendar is choosing the new Date(0) by default if nothing is picked.
 
   it("mark todo item as completed", async () => {
     render(<TodoList />);
@@ -69,7 +69,7 @@ describe("TodoList", () => {
     );
     expect(emptyTodoListText).toBeInTheDocument();
 
-    const addTodoButton = screen.getByRole("button", { name: /new/i });
+    const addTodoButton = screen.getByRole("button", { name: /add todo/i });
     await userEvent.click(addTodoButton);
     const titleInputText = screen.getByRole("textbox", { name: /title/i });
     const descriptionInputText = screen.getByRole("textbox", {
@@ -105,7 +105,7 @@ describe("TodoList", () => {
     );
     expect(emptyTodoListText).toBeInTheDocument();
 
-    const addTodoButton = screen.getByRole("button", { name: /new/i });
+    const addTodoButton = screen.getByRole("button", { name: /add todo/i });
     await userEvent.click(addTodoButton);
     const titleInputText = screen.getByRole("textbox", { name: /title/i });
     const descriptionInputText = screen.getByRole("textbox", {

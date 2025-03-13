@@ -226,7 +226,7 @@ export default function TodoList() {
     return (
       <div className="flex flex-wrap gap-2">
         <Button
-          label="New"
+          label="Add todo"
           icon="pi pi-plus"
           severity="success"
           onClick={openNew}
@@ -261,12 +261,10 @@ export default function TodoList() {
       month: "long",
     });
     const dayDate = String(date?.getDate()).padStart(2, "0");
-    const day = String(
-      date?.toLocaleDateString("en-US", { weekday: "long" })
-    ).padStart(2, "0");
     const hours = String(date.getHours()).padStart(2, "0");
     const minutes = String(date.getMinutes()).padStart(2, "0");
-    const displayDate = `${day}, ${month} ${dayDate} - ${hours}:${minutes}`;
+    const year = String(date.getFullYear()).padStart(2, "0");
+    const displayDate = `${month} ${dayDate}, ${year} - ${hours}:${minutes}`;
     return displayDate;
   };
 
@@ -283,6 +281,7 @@ export default function TodoList() {
     return (
       <React.Fragment>
         <Button
+          tooltip="Edit todo"
           icon="pi pi-pencil"
           rounded
           outlined
@@ -291,6 +290,7 @@ export default function TodoList() {
           disabled={rowData.status === "COMPLETED"}
         />
         <Button
+          tooltip="Delete todo"
           icon="pi pi-trash"
           rounded
           outlined
@@ -399,7 +399,7 @@ export default function TodoList() {
         options={statuses}
         onChange={(e) => options.filterApplyCallback(e.value)}
         itemTemplate={statusItemTemplate}
-        placeholder="Select One"
+        placeholder="Select status"
         className="p-column-filter"
         showClear
         style={{ minWidth: "12rem" }}
@@ -502,7 +502,8 @@ export default function TodoList() {
               required
               autoFocus
               className={classNames({
-                "p-invalid": submitted && !todo.title,
+                "p-invalid":
+                  submitted && !todo.title && !(todo.title.length > 20),
               })}
             />
             {submitted && !todo.title && (
@@ -587,7 +588,7 @@ export default function TodoList() {
               style={{ fontSize: "2rem" }}
             />
             {todo && (
-              <span>Are you sure you want to delete the selected todos?</span>
+              <span>Are you sure you want to delete the selected todo(s)?</span>
             )}
           </div>
         </Dialog>
@@ -608,7 +609,7 @@ export default function TodoList() {
             />
             {todo && (
               <span>
-                Are you sure you want to set the selected todos to completed?
+                Are you sure you want to set the selected todo(s) to completed?
               </span>
             )}
           </div>
