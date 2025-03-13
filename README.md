@@ -20,7 +20,7 @@ npm run dev # Runs the application (on port 5173 by default)
 
 ## Testing the application
 
-Although I wasn't able to run the tests, they have been setup and configured. To run them, use the command:
+Although I wasn't able to run the tests (read the "Nice to haves" section for more details), they have been setup and configured. To run them, use the command:
 
 ```bash
 npm run test # Uses Vitest to run tests

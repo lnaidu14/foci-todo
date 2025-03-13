@@ -410,6 +410,7 @@ export default function TodoList() {
   return (
     <>
       <div className="w-full h-100">
+        <h1 className="flex justify-content-center">Todo App</h1>
         <Toast ref={toast} />
         <div className="card">
           <Toolbar className="mb-4" left={leftToolbarTemplate}></Toolbar>
