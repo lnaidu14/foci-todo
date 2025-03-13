@@ -19,7 +19,7 @@ These were the tools and tech used in my environment:
 - Vite
 - React
 - Vitest
-- Windows
+- Windows 10
 
 ## Data models
 
