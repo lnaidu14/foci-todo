@@ -12,6 +12,8 @@
     "test-ui": "vitest --ui"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.49.1",
+    "dotenv": "^16.4.7",
     "primeflex": "^4.0.0",
     "primeicons": "^7.0.0",
     "primereact": "^10.9.3",
@@ -42,6 +44,7 @@
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
     "vite": "^6.2.0",
+    "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.0.8"
   },
   "eslintConfig": {}

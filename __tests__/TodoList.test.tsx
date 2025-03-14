@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import TodoList from "./TodoList";
+import TodoList from "../src/components/TodoList/TodoList";
 import "@testing-library/jest-dom/vitest";
 import userEvent from "@testing-library/user-event";
 import { it, expect, describe } from "vitest";
