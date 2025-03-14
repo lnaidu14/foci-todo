@@ -1,8 +1,8 @@
 import { Button } from "primereact/button";
 import { Dialog } from "primereact/dialog";
 import React, { Dispatch, SetStateAction } from "react";
-import { Todo } from "@customTypes/TodoList";
-import { completeTodo } from "@data/";
+import { Todo } from "../../types/TodoList";
+import { completeTodo } from "../../data";
 
 type CompleteTodosDialogProps = {
   completeTodosDialog: boolean;

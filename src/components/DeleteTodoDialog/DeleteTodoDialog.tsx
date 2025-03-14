@@ -1,8 +1,8 @@
 import { Dialog } from "primereact/dialog";
 import React, { Dispatch, SetStateAction } from "react";
-import { Todo } from "@customTypes/TodoList";
-import { emptyTodo } from "@helpers/constants";
-import { deleteTodos } from "@data/";
+import { Todo } from "../../types/TodoList";
+import { emptyTodo } from "../../helpers/constants";
+import { deleteTodos } from "../../data";
 import { Button } from "primereact/button";
 
 type DeleteTodoDialogProps = {

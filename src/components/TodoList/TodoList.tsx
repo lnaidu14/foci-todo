@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 import { Todo } from "@customTypes/TodoList";
-import { emptyTodo } from "@helpers/";
-import { fetchAllTodos } from "@data/";
+import { emptyTodo } from "../../helpers";
+import { fetchAllTodos } from "../../data";
 import { Button } from "primereact/button";
 import { Toast } from "primereact/toast";
 import {
@@ -11,8 +11,8 @@ import {
   DeleteTodosDialog,
   CompleteTodosDialog,
   DeleteTodoDialog,
-} from "@components/";
-import supabase from "@/supabase";
+} from "../../components";
+import supabase from "../../supabase";
 import {
   LeftToolbarTemplate,
   statusBodyTemplate,

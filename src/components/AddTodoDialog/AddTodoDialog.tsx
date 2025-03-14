@@ -1,9 +1,9 @@
 import { Button } from "primereact/button";
 import { Dialog } from "primereact/dialog";
 import React, { ChangeEvent, Dispatch, SetStateAction, useState } from "react";
-import { Todo } from "@customTypes/TodoList";
-import { createTodo, patchTodo } from "@data/";
-import { emptyTodo } from "@helpers/constants";
+import { Todo } from "../../types/TodoList";
+import { createTodo, patchTodo } from "../../data";
+import { emptyTodo } from "../../helpers/constants";
 import { InputText } from "primereact/inputtext";
 import { InputTextarea } from "primereact/inputtextarea";
 import { classNames } from "primereact/utils";
@@ -116,10 +116,12 @@ export default function AddTodoDialog({
           <InputText
             id="title"
             value={todo.title}
+            placeholder="Water the plants..."
             onChange={(e) => onInputChange(e, "title")}
             required
             autoFocus
             className={classNames({ "p-invalid": submitted && !todo.title })}
+            data-testid="add-todo-test"
           />
           {submitted && !todo.title && (
             <small className="p-error">Name is required.</small>
@@ -131,6 +133,7 @@ export default function AddTodoDialog({
           </label>
           <InputTextarea
             id="description"
+            placeholder="Water the plants in the evening..."
             value={todo.description}
             onChange={(e: ChangeEvent<HTMLTextAreaElement>) =>
               onInputChange(e, "description")

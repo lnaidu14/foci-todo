@@ -1,8 +1,8 @@
 import { Tag } from "primereact/tag";
 import { Dropdown } from "primereact/dropdown";
-import { emptyTodo, statuses, getTodoStatus } from "@helpers/constants";
+import { emptyTodo, statuses, getTodoStatus } from "../../helpers";
 import { Button } from "primereact/button";
-import { Todo } from "@customTypes/TodoList";
+import { Todo } from "../../types/TodoList";
 import { Dispatch, SetStateAction } from "react";
 import { Toolbar } from "primereact/toolbar";
 

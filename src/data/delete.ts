@@ -1,4 +1,4 @@
-import supabase from "@/supabase"
+import supabase from "../supabase"
 
 export const deleteTodos = async (id: string[]) => {
     const { error } = await supabase

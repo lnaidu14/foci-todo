@@ -1,5 +1,5 @@
-import supabase from "@/supabase"
-import { Todo } from "@customTypes/TodoList"
+import supabase from "../supabase"
+import { Todo } from "../types/TodoList"
 
 export const completeTodo = async (id: string[]) => {
     const { data, error } = await supabase
